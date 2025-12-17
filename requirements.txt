@@ -1,0 +1,12 @@
+streamlit
+snowflake-connector-python
+pandas
+PyPDF2
+scikit-learn
+python-dotenv
+nltk
+numpy
+
+google-generativeai
+watchdog
+openpyxl
