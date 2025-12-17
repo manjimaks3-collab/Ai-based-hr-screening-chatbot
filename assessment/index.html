@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Assessment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Technical Assessment</h1>
+            <p>Candidate ID: <span id="candidate-id">Loading...</span></p>
+        </header>
+
+        <form id="assessment-form">
+            <div id="questions-container">
+                <!-- Questions will be injected here by JS -->
+            </div>
+            
+            <button type="button" id="submit-btn" onclick="submitAssessment()">Submit Assessment</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
