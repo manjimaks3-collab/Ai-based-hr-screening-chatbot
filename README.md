@@ -186,3 +186,154 @@ Visualization: Power BI
 ## Database details:
 Name, email, gender, phno, city, state, pincode, country, address, applied role, resume url, ats score, ats pass, assesment token, assesment score, final score, key word score, shortlisted, shortlisted score, job description, skills, work experience, languages known, highest level of education, name of university, feild of study, year of graduation 
 
+
+## Abstract :
+Recruitment is one of the most critical and challenging functions in modern organizations, where early and accurate candidate screening plays a vital role in improving hiring quality and operational efficiency. Traditional recruitment processes, such as manual resume screening, written examinations, and preliminary interviews, are time-consuming, resource-intensive, and susceptible to human bias and inconsistency. With the increasing volume of job applications, there is a growing need for automated and intelligent screening mechanisms. Recent advancements in artificial intelligence (AI), automation, and data-driven systems have shown significant potential in transforming recruitment workflows by improving efficiency, consistency, and decision quality.
+
+This study proposes an intelligent AI-based HR screening system that integrates automated resume screening, structured online assessments, and centralized candidate scoring to support effective recruitment decision-making. The system utilizes Applicant Tracking System (ATS)-based resume analysis to evaluate resume relevance against job requirements, followed by Python-based online assessments to measure candidates’ technical knowledge and aptitude. A composite scoring mechanism combines resume scores, application data, and assessment results to generate an objective shortlist of candidates. The application and job management functionalities are implemented using Streamlit, while Snowflake serves as the centralized data repository. Power BI is employed to visualize shortlisted candidates and performance metrics for HR decision-makers.
+
+The proposed system was evaluated using sample candidate datasets to analyze its screening accuracy, consistency, and efficiency. Experimental results indicate that the automated screening framework significantly reduces manual effort, improves shortlisting accuracy, and ensures consistent evaluation compared to traditional recruitment methods. The centralized scoring and ranking mechanism enables recruiters to make faster and more informed hiring decisions.
+
+This work contributes to AI-driven recruitment research by presenting a scalable, automated, and practical screening framework suitable for real-world hiring scenarios. The findings suggest that intelligent HR screening systems can enhance recruitment transparency, reduce administrative workload, and improve overall hiring effectiveness. Future enhancements may include the integration of explainable AI techniques, predictive analytics for hiring outcomes, and advanced interview analysis to further strengthen recruitment intelligence.
+
+
+## Working:
+
+WORKING OF THE SYSTEM
+
+The proposed AI-based HR screening system automates the initial stages of recruitment by integrating application management, resume screening, assessment evaluation, and candidate shortlisting into a unified workflow. The system operates through the following sequential stages:
+
+
+---
+
+1. User Registration and Login
+
+The system provides role-based authentication using a Streamlit interface. Users can register and log in as either Candidate or Admin.
+
+Candidates can register, log in, view available job postings, and submit applications.
+
+Admin users can log in to manage job postings and monitor candidate data.
+
+
+This role-based access ensures secure and controlled interaction with the system.
+
+
+---
+
+2. Job Posting and Management (Admin)
+
+After logging in, the Admin can:
+
+Post new job openings with required skills and qualifications.
+
+Edit or update existing job postings.
+
+View candidate application data stored in the database.
+
+
+All job-related information is stored in the Snowflake database and dynamically displayed to candidates through the Streamlit interface.
+
+
+---
+
+3. Application Submission (Candidate)
+
+Candidates log in and apply for a selected job by:
+
+Filling out the application form.
+
+Uploading their resume in PDF format.
+
+
+The submitted application and resume are validated and securely stored in Snowflake for further processing. At this stage, candidates can only submit applications and cannot view any screening scores.
+
+
+---
+
+4. ATS-Based Resume Screening
+
+Once an application is submitted, the system automatically performs ATS-based resume screening using Python.
+
+The resume is parsed to extract keywords and skills.
+
+The extracted data is compared with job requirements.
+
+An ATS score is generated for each candidate.
+
+
+If the ATS score does not meet the predefined threshold, the candidate is rejected. If the threshold is met, the candidate proceeds to the next stage.
+
+
+---
+
+5. Online Assessment Evaluation
+
+Candidates who pass the ATS screening are assigned an online assessment.
+
+The assessment is generated and evaluated using Python.
+
+The assessment tests technical knowledge and aptitude relevant to the job role.
+
+The assessment score is stored in Snowflake.
+
+
+Candidates who fail to meet the assessment threshold are rejected automatically.
+
+
+---
+
+6. Composite Scoring and Shortlisting
+
+For candidates who successfully clear both ATS screening and assessment evaluation:
+
+Resume score
+
+Application data score
+
+Assessment score
+
+
+are combined using a composite scoring mechanism to calculate a final score.
+
+Only candidates with final scores above the defined threshold are shortlisted.
+
+
+---
+
+7. Data Storage and Management
+
+All candidate data, scores, job details, and application statuses are stored centrally in the Snowflake database. This ensures data consistency, scalability, and secure access for analytics and reporting.
+
+
+---
+
+8. HR Visualization and Decision Support
+
+Shortlisted candidate data is visualized using Power BI dashboards.
+
+HR personnel can:
+
+View shortlisted candidates.
+
+Analyze score distributions and performance metrics.
+
+Compare candidates across different evaluation parameters.
+
+
+This enables HR teams to make faster, data-driven, and unbiased recruitment decisions.
+
+
+---
+
+9. System Outcome
+
+The system significantly reduces manual screening effort, minimizes human bias, and improves recruitment efficiency by automating resume evaluation, assessment scoring, and candidate ranking.
+
+
+---
+
+Overall Workflow Summary
+
+> Candidate → Application Submission → ATS Screening → Assessment Evaluation → Composite Scoring → HR Shortlisting
+
+## Software Tools:
