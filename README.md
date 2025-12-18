@@ -336,4 +336,6 @@ Overall Workflow Summary
 
 > Candidate → Application Submission → ATS Screening → Assessment Evaluation → Composite Scoring → HR Shortlisting
 
+
 ## Software Tools:
+Streamlit, Python, Snowflake, Power BI, VS Code, Git hub
